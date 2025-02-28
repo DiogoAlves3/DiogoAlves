@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+header {
+    padding: 2rem;
+    text-align: center;
+    background-color: #000000;
+    position: relative;
+    z-index: 10; 
+}
+
+.header-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-family: Montserrat;
+}
+
+.header-content h2 {
+    font-size: 1.5rem;
+    color: #CCCCCC;
+    margin-bottom: 1rem;
+}
+
+nav {
+    margin: 1rem 0;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #CCCCCC;
+}
+
+.cta-button {
+    background: none;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.1s ease; 
+}
+
+.cta-button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    transform: scale(1.1); 
+}
+
+.section {
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative; 
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: Montserrat;
+}
+
+.section p {
+    max-width: 800px;
+    margin: 1rem auto;
+    opacity: 1;
+    transform: translateY(0);
+    position: relative; 
+    z-index: 5; 
+}
+
+#sobre {
+    background-image: url('./img/back.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    padding-top: 10rem; 
+    position: relative; 
+}
+
+
+#sobre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit; 
+    opacity: 0.2; 
+    z-index: 1; 
+}
+
+
+#sobre h2, #sobre p {
+    position: relative; 
+    z-index: 5; 
+    opacity: 1 !important; 
+    color: #FFFFFF !important; 
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: #1a1a1a;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.project-card p {
+    margin: 1rem 0;
+    color: #FFFFFF;
+    font-family: Montserrat;
+}
+
+.project-button {
+    background: none;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+.project-card iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover iframe {
+    transform: scale(1.02);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover iframe {
+    transform: scale(1.02);
+}
+
+.project-card a {
+    text-decoration: none;
+}
+
+.project-button {
+    background: none;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 5px;
+    border: none;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover iframe {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card a {
+    text-decoration: none;
+}
+
+.project-button {
+    background: none;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project-button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+.section h3 {
+    color: #CCCCCC;
+    font-family: Montserrat;
+    font-size: 14px;
+    position: relative;
+    bottom: 2rem;
+}
+
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.testimonial-card {
+    background: #1a1a1a;
+    padding: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.testimonial-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .testimonial-image {
+        width: 100%;
+        height: 100%;
+    }
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+form {
+    max-width: 500px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    background: #1a1a1a;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 0.8rem;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #CCCCCC;
+    outline: none;
+}
+
+.social-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem; 
+}
+
+.social-links img {
+    width: 40px; 
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+    transform: scale(1.1); 
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    display: none;
+    background: #000000; 
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.whatsapp-link:hover .whatsapp-tooltip {
+    display: block;
+    animation: slideIn 0.3s ease-out; 
+}
+
+.whatsapp-gif {
+    width: 600px; 
+    height: 300px; 
+    border-radius: 5px;
+    object-fit: contain; 
+}
+
+
+@media (max-width: 768px) {
+    .whatsapp-gif {
+        width: 150px; 
+        height: 100px; 
+    }
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.whatsapp-link {
+    position: relative;
+}
+
+.whatsapp-tooltip {
+    position: absolute;
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px; 
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    background: #1a1a1a;
+}
+
+footer p, footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    margin: 0.5rem 0;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #CCCCCC;
+}
+
+.whatsapp-button {
+    background: none;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block; 
+    margin-top: 1rem; 
+}
+
+.whatsapp-button:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+}
