@@ -1,18 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #000;
-    color: #fff;
-    line-height: 1.6;
-}
-
+/* Critical CSS inlineado para header e #sobre */
 header {
     padding: 2rem;
     text-align: center;
@@ -29,6 +15,42 @@ header {
     font-size: 1.5rem;
     color: #ccc;
     margin-bottom: 1rem;
+}
+
+#sobre {
+    background-image: url('./img/back.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 10rem;
+    position: relative;
+}
+
+#sobre::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Import apenas das fontes necessárias */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
 }
 
 nav {
@@ -78,26 +100,6 @@ nav a:hover {
     margin: 1rem auto;
 }
 
-#sobre {
-    background-image: url('./img/back.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding-top: 10rem;
-    position: relative;
-}
-
-#sobre::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-}
-
 #sobre h2, #sobre p {
     position: relative;
 }
@@ -116,15 +118,15 @@ nav a:hover {
     overflow: hidden;
 }
 
-.project-card iframe {
+.project-card img {
     width: 100%;
     height: 350px;
+    object-fit: cover;
     border-radius: 5px;
-    border: none;
     transition: transform 0.3s ease;
 }
 
-.project-card:hover iframe {
+.project-card:hover img {
     transform: scale(1.02);
 }
 
@@ -235,10 +237,10 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-    .testimonials {
+    .projects-grid, .testimonials {
         grid-template-columns: 1fr;
     }
 }
+
+/* Cache policy suggestion: Use long-lived cache in your server config */
+/* Example: Cache-Control: public, max-age=31536000 for static assets */
