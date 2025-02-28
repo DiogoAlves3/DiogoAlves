@@ -18,7 +18,7 @@ header {
 }
 
 #sobre {
-    background-image: url('./img/back.png');
+    background-image: url('./img/back.svg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
